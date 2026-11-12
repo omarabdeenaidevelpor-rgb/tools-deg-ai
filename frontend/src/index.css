@@ -1,0 +1,179 @@
+:root {
+  --background: 222 47% 4%;
+  --foreground: 210 40% 98%;
+  --card: 222 47% 6%;
+  --card-foreground: 210 40% 98%;
+  --primary: 45 100% 51%;
+  --primary-foreground: 222 47% 4%;
+  --secondary: 217 33% 17%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 217 33% 17%;
+  --accent-foreground: 210 40% 98%;
+  --border: 217 33% 17%;
+  --ring: 45 100% 51%;
+  --radius: 0.5rem;
+}
+
+.light {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 4%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 4%;
+  --primary: 45 100% 51%;
+  --primary-foreground: 222 47% 4%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 4%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222 47% 4%;
+  --border: 214 32% 91%;
+  --ring: 45 100% 51%;
+}
+
+* {
+  box-sizing: border-box;
+  border-color: hsl(var(--border));
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Inter', sans-serif;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+.font-arabic {
+  font-family: 'Tajawal', sans-serif;
+}
+
+.font-english {
+  font-family: 'Inter', sans-serif;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-in-from-top {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-in-from-left {
+  from { transform: translateX(-10px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-in-from-right {
+  from { transform: translateX(10px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-slide-in-from-top {
+  animation: slide-in-from-top 0.3s ease-out;
+}
+
+.animate-slide-in-from-left {
+  animation: slide-in-from-left 0.3s ease-out;
+}
+
+.animate-slide-in-from-right {
+  animation: slide-in-from-right 0.3s ease-out;
+}
+
+.card {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: hsl(var(--foreground));
+}
+
+.btn-ghost:hover {
+  background-color: hsl(var(--muted));
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  background-color: hsl(var(--card));
+  color: hsl(var(--foreground));
+}
+
+.input:focus {
+  outline: none;
+  border-color: hsl(var(--ring));
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: hsl(var(--muted-foreground));
+}

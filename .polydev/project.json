@@ -1,0 +1,13 @@
+{
+  "name": "tools deg ai",
+  "templateId": "empty",
+  "agent": {
+    "profile": "light",
+    "planApproval": true,
+    "askUser": true
+  },
+  "ai": {
+    "provider": "free_ai_default",
+    "model": ""
+  }
+}
